@@ -9,29 +9,22 @@ const setLogoTransform = (deg, duration = '2s') => {
 logo.addEventListener('mouseover', () => setLogoTransform(360));
 logo.addEventListener('mouseout', () => setLogoTransform(0));
 
-// Saving messages to local storage
 const submitBtn = document.querySelector('#submit-btn');
 const textArea = document.querySelector('.text');
 const previousMessages = document.querySelector('.previous-messages');
 
-// Save messages to localStorage
 const saveMessagesToLocalStorage = (messages) => {
     localStorage.setItem('messages', JSON.stringify(messages));
 };
 
-// Display message in the DOM
 const displayMessage = (messageObj) => {
     const messageElement = document.createElement('p');
-    messageElement.textContent = messageObj.text;
-    // Add timestamp as the title for the hover effect
     messageElement.setAttribute('title', `${messageObj.timestamp}`);
     previousMessages.appendChild(messageElement);
 };
 
-// Retrieving existing messages from localStorage
 let messages = JSON.parse(localStorage.getItem('messages')) || [];
 
-// Displaying previous messages
 window.addEventListener('load', () => {
     if (messages.length > 0) {
         messages.forEach(displayMessage);
@@ -87,7 +80,6 @@ textArea.addEventListener('keydown', (event) => {
 });
 
 // Select dropdown
-
 const selectMenu = document.querySelector('#select-menu');
 const list = document.querySelector('#list');
 
@@ -105,7 +97,7 @@ selectMenu.addEventListener('change', (event) => {
     }
 });
 
-// User
+// User redirection
 const userBtn = document.querySelector('#user-btn');
 
 userBtn.addEventListener('click', () => {
@@ -113,7 +105,6 @@ userBtn.addEventListener('click', () => {
 });
 
 // Jokes
-
 const forceAnswerBtn = document.querySelector('#force-answer-btn');
 const jokeContainer = document.querySelector('.joke');
 
