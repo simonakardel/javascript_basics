@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>User</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <form id="userForm">
+                <div class="input-group">
+                    <label for="firstName">First name*</label>
+                    <input
+                        type="text"
+                        id="firstName"
+                        placeholder="First name"
+                    />
+                    <span id="firstNameError" class="error" role="alert"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="lastName">Last name*</label>
+                    <input type="text" id="lastName" placeholder="Last name" />
+                    <span id="lastNameError" class="error" role="alert"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="Email" />
+                    <span id="emailError" class="error" role="alert"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age*</label>
+                    <input
+                        type="number"
+                        id="age"
+                        placeholder="Age"
+                        min="0"
+                        max="100"
+                    />
+                    <span id="ageError" class="error" role="alert"></span>
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn">
+                    Submit
+                </button>
+            </form>
+        </main>
+
+        <script type="text/javascript" src="user.js"></script>
+    </body>
+</html>

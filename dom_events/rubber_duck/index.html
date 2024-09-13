@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Mr. Duck</title>
+    </head>
+    <body>
+        <header>
+            <div class="user-btn-container">
+                <button type="button" id="user-btn" class="btn">User</button>
+            </div>
+            <div class="hero">
+                <h1>Mr. Duck</h1>
+                <button type="button" id="force-answer-btn" class="btn">
+                    Force answer
+                </button>
+                <img src="images/duck.png" alt="Mr. Duck logo" class="logo" />
+            </div>
+            <p id="greeting"></p>
+            <div class="joke"></div>
+        </header>
+        <main>
+            <h3>Select an item</h3>
+            <select id="select-menu">
+                <option value="" disabled selected>Select an option</option>
+                <option value="item1">Item 1</option>
+                <option value="item2">Item 2</option>
+                <option value="item3">Item 3</option>
+            </select>
+            <ul id="list"></ul>
+
+            <div class="message-container">
+                <textarea class="text" cols="30" rows="10"></textarea>
+                <button id="submit-btn" class="btn">Submit</button>
+            </div>
+            <div class="previous-messages">
+                <h3>Previous messages</h3>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
