@@ -34,7 +34,6 @@ main {
     padding: 10px 15px;
     width: 150px;
     transition:
-        background 0.2s ease,
         box-shadow 0.1s ease,
         transform 0.1s ease;
 }
