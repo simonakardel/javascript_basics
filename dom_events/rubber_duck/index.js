@@ -20,6 +20,7 @@ const saveMessagesToLocalStorage = (messages) => {
 const displayMessage = (messageObj) => {
     const messageElement = document.createElement('p');
     messageElement.setAttribute('title', `${messageObj.timestamp}`);
+    messageElement.textContent = messageObj.text; 
     previousMessages.appendChild(messageElement);
 };
 
